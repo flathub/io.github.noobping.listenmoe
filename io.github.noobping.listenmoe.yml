@@ -28,8 +28,6 @@ modules:
     build-commands:
       - cargo build --release
       - install -Dm0755 target/release/listenmoe /app/bin/listenmoe
-      - install -Dm0644 data/128x128/apps/${FLATPAK_ID}.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
-      - install -Dm0644 data/256x256/apps/${FLATPAK_ID}.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
       - install -Dm0644 data/scalable/apps/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
       - install -Dm0644 data/${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
       - install -Dm0644 data/${FLATPAK_ID}.screenshot.png /app/share/metainfo/${FLATPAK_ID}.screenshot.png
@@ -49,7 +47,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/noobping/listenmoe.git
-        tag: v1.0.1
+        tag: v1.0.2
       - type: file
         path: cargo-sources.yml
       - cargo-sources.yml
