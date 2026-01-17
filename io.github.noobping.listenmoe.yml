@@ -29,11 +29,10 @@ modules:
       - cargo build --release
       - install -Dm0755 target/release/listenmoe /app/bin/listenmoe
       - install -Dm0644 data/scalable/apps/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
+      - install -Dm0644 data/symbolic/apps/${FLATPAK_ID}-symbolic.svg /app/share/icons/hicolor/symbolic/apps/${FLATPAK_ID}-symbolic.svg
       - install -Dm0644 data/${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
       - install -Dm0644 data/screenshot1.png /app/share/metainfo/${FLATPAK_ID}.screenshot1.png
       - install -Dm0644 data/screenshot2.png /app/share/metainfo/${FLATPAK_ID}.screenshot2.png
-      - install -d /app/share/icons/hicolor/symbolic/apps
-      - install -m644 data/symbolic/apps/* /app/share/icons/hicolor/symbolic/apps/
       - mkdir mo
       - |
         for f in po/*.po; do
@@ -48,7 +47,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/noobping/listenmoe.git
-        tag: v1.0.9
+        tag: v1.0.10
       - type: file
         path: cargo-sources.yml
       - cargo-sources.yml
