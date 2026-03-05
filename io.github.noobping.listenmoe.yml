@@ -48,7 +48,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/noobping/listenmoe.git
-        commit: 1964ad7e25f149679bf16b60e75c262dab376895
+        commit: b731b7866a918b6f8527f88e1854f34667470678
       - type: file
         path: cargo-sources.yml
       - cargo-sources.yml
