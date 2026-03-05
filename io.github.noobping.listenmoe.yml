@@ -27,7 +27,7 @@ modules:
         CARGO_HOME: /run/build/listenmoe/cargo
 
     build-commands:
-      - cargo build --release
+      - cargo build --release --features discord
       - install -Dm0755 target/release/listenmoe /app/bin/listenmoe
       - install -Dm0644 data/scalable/apps/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
       - install -Dm0644 data/symbolic/apps/${FLATPAK_ID}-symbolic.svg /app/share/icons/hicolor/symbolic/apps/${FLATPAK_ID}-symbolic.svg
@@ -48,7 +48,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/noobping/listenmoe.git
-        commit: 1f9e290497626f4604cfeab63b5146c02376d901
+        commit: b377b9a1f2bb317545cc595bf5d588f2c63accd9
       - type: file
         path: cargo-sources.yml
       - cargo-sources.yml
