@@ -1,6 +1,6 @@
 id: io.github.noobping.listenmoe
 runtime: org.gnome.Platform
-runtime-version: '49'
+runtime-version: '50'
 sdk: org.gnome.Sdk
 
 sdk-extensions:
@@ -50,7 +50,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/noobping/listenmoe.git
-        commit: 3af84f7eeedaa7ddcdc1fc6d27da668b886fb03a
+        commit: 9e9d2d21f64d009f59e4274f0af95602163ad270
       - type: file
         path: cargo-sources.yml
       - cargo-sources.yml
