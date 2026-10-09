@@ -1,6 +1,6 @@
 id: io.github.noobping.listenmoe
 runtime: org.gnome.Platform
-runtime-version: '50'
+runtime-version: '51'
 sdk: org.gnome.Sdk
 
 sdk-extensions:
@@ -25,6 +25,7 @@ modules:
       append-path: /usr/lib/sdk/rust-stable/bin
       env:
         CARGO_HOME: /run/build/listenmoe/cargo
+        AWS_LC_SYS_CMAKE_BUILDER: '1'
 
     build-commands:
       - cargo build --release
@@ -50,7 +51,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/noobping/listenmoe.git
-        commit: 4b1ae700c18951393863fd8218dd27f2bb589c2a
+        commit: 614d79d040d5dbdd4afae1e26c5a96e4062048f6
       - type: file
         path: cargo-sources.yml
       - cargo-sources.yml
